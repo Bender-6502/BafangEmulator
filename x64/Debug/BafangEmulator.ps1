@@ -1,2 +1,2 @@
-.\BafangEmulator.exe -p COM4 -g general.el -c config.el
+.\BafangEmulator.exe --port COM2 --general general.el --config config.el
 pause
