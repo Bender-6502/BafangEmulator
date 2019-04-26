@@ -1,0 +1,14 @@
+
+*.ipch
+.vs/BafangEmulator/v15/.suo
+*.db
+*.opendb
+*.log
+*.lastbuildstate
+*.tlog
+*.obj
+x64/Debug/BafangEmulator.pdb
+x64/Debug/BafangEmulator.ilk
+x64/Debug/BafangEmulator.exe
+BafangEmulator/x64/Debug/vc141.pdb
+BafangEmulator/x64/Debug/vc141.idb
