@@ -1,6 +1,6 @@
 
 *.ipch
-.vs/BafangEmulator/v15/.suo
+.vs
 *.db
 *.opendb
 *.log
