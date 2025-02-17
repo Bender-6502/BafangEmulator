@@ -2,6 +2,8 @@
 #include <Windows.h>
 #include <stdexcept>
 #include <thread>
+#include <system_error>
+
 
 namespace core
 {

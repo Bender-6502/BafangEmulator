@@ -18,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="trace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,12 +33,6 @@
     <ClCompile Include="serial_handler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ctest.cpp">
-      <Filter>tests</Filter>
-    </ClCompile>
-    <ClCompile Include="ctest_main.cpp">
-      <Filter>tests</Filter>
-    </ClCompile>
     <ClCompile Include="packet_builder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -50,6 +41,15 @@
     </ClCompile>
     <ClCompile Include="getopt.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="packet_unit-tests.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_unit-tests.cpp">
+      <Filter>tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,20 +71,11 @@
     <ClInclude Include="serial_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ctest.h">
-      <Filter>tests</Filter>
-    </ClInclude>
-    <ClInclude Include="ctest_profile.h">
-      <Filter>tests</Filter>
-    </ClInclude>
     <ClInclude Include="packet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="packet_general.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ctest_packet_general.h">
-      <Filter>tests</Filter>
     </ClInclude>
     <ClInclude Include="packet_types.h">
       <Filter>Header Files</Filter>
@@ -107,6 +98,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BafangEmulator.ps1">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="packages.config" />
+    <None Include="config.el">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="DefaultProfile.el">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="em3ev.el">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="general.el">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Penoff.el">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
