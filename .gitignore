@@ -7,7 +7,8 @@
 *.lastbuildstate
 *.tlog
 *.obj
-x64
-x86
-BafangEmulator/x64
-BafangEmulator/x84
+/x64
+/x86
+/BafangEmulator/x64
+/BafangEmulator/x86
+/!packages
