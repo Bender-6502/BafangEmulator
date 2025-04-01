@@ -1,8 +1,8 @@
 #include "serial.h"
+#include "exceptions.h"
 #include <Windows.h>
 #include <stdexcept>
 #include <thread>
-#include <system_error>
 
 
 namespace core
@@ -43,7 +43,7 @@ namespace core
                             0);
 
       if (!is_connected())
-        throw std::system_error(GetLastError(), std::system_category(), "open port failure");
+        throw std::system_error(core::get_last_error(), std::string("open port failure ") + port_);
 
       if (connected_)
         connected_();
@@ -87,10 +87,10 @@ namespace core
       dcb.DCBlength = sizeof(dcb);
 
       if (!BuildCommDCBA(data.c_str(), &dcb))
-        throw std::system_error(GetLastError(), std::system_category(), "set param failure from string");
+        throw std::system_error(core::get_last_error(), std::string("set param failure from string ") + port_);
 
       if (!SetCommState(handle_, &dcb))
-        throw std::system_error(GetLastError(), std::system_category(), "set param failure");
+        throw std::system_error(core::get_last_error(), std::string("set param failure ") + port_);
 
       COMMTIMEOUTS timeouts;
       timeouts.ReadIntervalTimeout = 20;
@@ -99,7 +99,7 @@ namespace core
       timeouts.WriteTotalTimeoutMultiplier = 10;
       timeouts.WriteTotalTimeoutConstant = 100;
       if (!SetCommTimeouts(handle_, &timeouts))
-        throw std::system_error(GetLastError(), std::system_category(), "set comms timeout failure");
+        throw std::system_error(core::get_last_error(), std::string("set comms timeout failure ") + port_);
     }
 
     void flush(size_t size)
@@ -131,7 +131,7 @@ namespace core
       DWORD dwWritten = 0;
       if (!WriteFile(handle_, data.data(), (DWORD)data.length(), &dwWritten, nullptr))
       {
-        throw std::system_error(GetLastError(), std::system_category(), "comms write failure");
+        throw std::system_error(core::get_last_error(), std::string("comms write failure ") + port_);
       }
     }
 
